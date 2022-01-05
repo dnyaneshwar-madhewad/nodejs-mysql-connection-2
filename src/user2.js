@@ -6,7 +6,7 @@ const dbinfo = {
   host: "localhost", // location of the database.
   user: "root",
   password: "cdac",
-  database: "insta",
+  database: "day1",
 };
 
 const selectAllUser = async () => {
@@ -17,7 +17,7 @@ const selectAllUser = async () => {
   // let sql = `SELECT * FROM user`;
   // let sql = `SELECT * FROM user ORDER BY ID DESC`;
 
-  let sql='SELECT * FROM instagram where username=?';
+  let sql='SELECT * FROM user';
     const list=await connection.queryAsync(sql);
     console.log(list);
     await connection.endAsync();
